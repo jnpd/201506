@@ -4,10 +4,16 @@
     //__filename 当前模块绝对路径
     //__dirname当前模块目录绝对路径
     //module 当前模块对象
-    var name = 'zfpx';
-    var age = 6;
-var say = function(){}
-var home = 'bejing';
-exports.name = name;
-exports.age = age;
+function Person(name){
+    this.name = name;
+}
+Person.prototype.getName = function(){
+    return this.name;
+}
+Person.prototype.setName = function(name){
+    this.name = name;
+}
+Person.prototype.name = '神雕';
+
+module.exports = Person;
 //return exports;

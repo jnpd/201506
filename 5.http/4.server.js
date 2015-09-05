@@ -33,12 +33,7 @@ http.createServer(function(req,res){
         res.end(JSON.stringify(queryObj));
     }else{
         var filename = '.'+pathname;
-        console.log(path.extname(filename));
-        if(path.extname(filename)=='.mp3'){
-            res.setHeader('Content-Type','application/streamingmedia');
-        }else{
-            res.setHeader('Content-Type',mime.lookup(pathname));
-        }
+
         fs.exists(filename,function(exists){
             if(exists){
                 fs.readFile(filename,function(err,data){
