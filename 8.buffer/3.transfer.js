@@ -15,4 +15,4 @@ console.log(parseInt('af',16));//175
 //将10进制转成任意进制
 console.log((154).toString(2));//10011010
 console.log((154).toString(16));//9a 16进制
-console.log((154).toString(64));//4q 32进制
+console.log((154).toString(32));//4q 32进制
